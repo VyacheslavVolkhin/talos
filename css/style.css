@@ -465,6 +465,42 @@ body {
 .wrap.wrap-main {
   padding-top: 0;
 }
+.mobile-panel-box {
+  display: block;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 74px;
+  border-top: 1px solid #4B4B4B;
+  background-color: var(--clr-base);
+  line-height: 1;
+}
+.mobile-panel-box .inner-wrap {
+  padding: 0;
+  height: 73px;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 12px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.mobile-panel-box .button-wrap {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 12px;
+}
+.mobile-panel-box .action-wrap {
+  -ms-flex: 1;
+      flex: 1;
+  max-width: 100px;
+}
+.mobile-panel-box .btn {
+  padding: 0 19px;
+  height: 73px;
+  font-size: 12px;
+}
 .footer {
   overflow: hidden;
   background-color: #1A1919;
@@ -700,6 +736,9 @@ body {
     margin-left: calc(var(--paddingContainer) * -1);
     margin-right: calc(var(--paddingContainer) * -1);
   }
+  .wrap {
+    padding-bottom: 74px;
+  }
   .search-show .header .logo-wrap {
     opacity: 0;
     pointer-events: none;
@@ -867,6 +906,9 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .mobile-panel-box {
+    display: none;
+  }
   .wrap {
     padding-top: 0;
   }
@@ -3496,6 +3538,23 @@ select.form-input:required:invalid {
 }
 .btn-action-ico.button-soc:hover {
   opacity: 0.8;
+}
+.btn-header-mobile {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.68);
+  padding: 0 5px;
+  height: 73px;
+  overflow: hidden;
+  padding-top: 14px;
+}
+.btn-header-mobile .button-ico {
+  width: 100%;
+  height: 26px;
+  margin-bottom: 2px;
 }
 .btn-action-scroll {
   font-size: 12px;

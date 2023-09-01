@@ -172,3 +172,10 @@ submenuButtonBack.addEventListener('click', function(e) {
 	return false
 })
 
+//button scroll up
+let buttonUp = document.getElementById("up");
+buttonUp.addEventListener('click', function(e) {
+	window.scrollTo({top: 0, behavior: 'smooth'});
+	e.preventDefault()
+	e.stopPropagation()
+})
