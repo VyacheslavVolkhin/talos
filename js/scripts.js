@@ -1,4 +1,30 @@
 $(window).on('load', function () {
+
+
+	//popups
+	let popupCurrent;
+	$('.js-popup-open').on('click', function () {
+		$('.popup-outer-box').removeClass('active');
+		$('body').addClass('popup-open');
+		popupCurrent = $(this).attr('data-popup');
+		$('.popup-outer-box[id="' + popupCurrent + '"]').addClass('active');
+		return false;
+	})
+	$('.js-popup-close').on('click', function () {
+		$('body').removeClass('popup-open');
+		$('.popup-outer-box').removeClass('active');
+		return false;
+	})
+	$('.popup-outer-box').on('click', function (event) {
+		if (!event.target.closest('.popup-box')) {
+			$('body').removeClass('popup-open');
+			$('body').removeClass('popup-open-scroll');
+			$('.popup-outer-box').removeClass('active');
+			return false;
+		}
+	})
+	
+	
 	//main-tiles-slider-box
 	if (!!$('.main-tiles-slider-box').offset()) {
 		if ($(window).innerWidth() > 1023) {
@@ -179,3 +205,44 @@ buttonUp.addEventListener('click', function(e) {
 	e.preventDefault()
 	e.stopPropagation()
 })
+
+
+//js tabs
+const tabsNav = document.querySelectorAll('.js-tabs-nav')
+const tabsBlocks = document.querySelectorAll('.js-tab-block')
+
+function tabsActiveStart() {
+	for (iTab = 0; iTab < tabsBlocks.length; iTab++) {
+		if (tabsBlocks[iTab].classList.contains('active')) {
+			tabsBlocks[iTab].classList.remove('active')
+		}
+	}
+	for (i = 0; i < tabsNav.length; i++) {
+		let tabsNavElements = tabsNav[i].querySelectorAll('[data-tab]')
+		for (iElements = 0; iElements < tabsNavElements.length; iElements++) {
+			if (tabsNavElements[iElements].classList.contains('active')) {
+				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
+				for (j = 0; j < tabsBlocks.length; j++) {
+					if (tabsBlocks[j].dataset.tab === tabsNavElementActive) {
+						tabsBlocks[j].classList.add('active')
+					}
+				}
+			}
+		}
+	}
+}
+
+for (i = 0; i < tabsNav.length; i++) {
+	tabsNav[i].addEventListener('click', function (e) {
+		if (e.target.closest('[data-tab]').dataset) {
+			let tabsNavElements = this.querySelector('[data-tab].active')
+			tabsNavElements.classList.remove('active')
+			e.target.closest('[data-tab]').classList.add('active')
+			tabsActiveStart()
+			e.preventDefault()
+			e.stopPropagation()
+			return false
+		}
+	})
+}
+tabsActiveStart()

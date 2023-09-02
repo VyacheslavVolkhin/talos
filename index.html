@@ -61,10 +61,10 @@
                 </div>
                 <div class="actions-wrap">
                     <div class="action-wrap">
-                        <a href="" class="btn button-header">Каталог продукции</a>
+                        <a href="" class="btn button-header js-popup-open" data-popup="popup-catalog-search">Каталог продукции</a>
                     </div>
                     <div class="action-wrap">
-                        <a href="" class="btn button-header">Оставить заявку</a>
+                        <a href="" class="btn button-header js-popup-open" data-popup="popup-order">Оставить заявку</a>
                     </div>
                 </div>
                 <div class="search-wrap popup-search-wrap js-popup-wrap">
@@ -267,8 +267,10 @@
         <div class="page-full">
             <br><br><br><br><br>
             <ul>
-                333
+                <li><a href="main.html">Main</a></li>
                 <li>--------</li>
+                <li><a href="" class="js-popup-open" data-popup="popup-catalog-search">Каталог продукции</a></li>
+                <li><a href="" class="js-popup-open" data-popup="popup-order">Оставить заявку</a></li>
             </ul>
             <br><br><br><br><br>
         </div>
@@ -334,6 +336,181 @@
             </div>
         </footer>
         <!-- /footer -->
+
+
+        <div class="popup-outer-box popup-top" id="popup-catalog-search">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <!--catalog-search-box-->
+                    <div class="catalog-search-box">
+                        <div class="info-inner-wrap">
+                            <div class="tabs-box js-tabs-nav">
+                                <ul class="menu">
+                                    <li><a href="" class="btn-tab active" data-tab="popup-tab01"><span class="button-title">Кейсы</span></a></li>
+                                    <li><a href="" class="btn-tab" data-tab="popup-tab02"><span class="button-title">контейнеры</span></a></li>
+                                    <li><a href="" class="btn-tab" data-tab="popup-tab03"><span class="button-title">Рэковые кейсы (U)</span></a></li>
+                                </ul>
+                            </div>
+                            <!--form-inner-wrap-->
+                            <div class="form-inner-wrap js-tab-block" data-tab="popup-tab01">
+                                <div class="form-title-wrap">
+                                    <div class="frm-title">Подбор кейсов по внутренним размерам, мм</div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="frm-field-inputs">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Длина">
+                                            </div>
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Ширина">
+                                            </div>
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Высота">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field">
+                                        <button type="submit" class="btn button-border">Подобрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/form-inner-wrap-->
+                            <!--form-inner-wrap-->
+                            <div class="form-inner-wrap js-tab-block" data-tab="popup-tab02">
+                                <div class="form-title-wrap">
+                                    <div class="frm-title">Подбор кейсов по внутренним размерам, мм</div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="frm-field-inputs">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Длина">
+                                            </div>
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Ширина">
+                                            </div>
+                                            <div class="field-input">
+                                                <input type="text" class="form-input" placeholder="Высота">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field">
+                                        <button type="submit" class="btn button-border">Подобрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/form-inner-wrap-->
+                            <!--form-inner-wrap-->
+                            <div class="form-inner-wrap js-tab-block" data-tab="popup-tab03">
+                                <div class="form-title-wrap">
+                                    <div class="frm-title">Подбор рэкового кейса-контейнера по&nbsp;высоте&nbsp;(U)</div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <select class="form-input" required>
+                                            <option selected disabled hidden value="">Выбрать</option><!--placeholder-->
+                                            <option>Пункт списка</option>
+                                            <option>Пункт списка</option>
+                                            <option>Пункт списка</option>
+                                            <option>Пункт списка</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field">
+                                        <button type="submit" class="btn button-border">Подобрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/form-inner-wrap-->
+                        </div>
+                        <div class="photo-inner-wrap">
+                            <picture class="elm-photo js-tab-block" data-tab="popup-tab01">
+                                <source srcset="./img/cat-search01.svg" media="(min-width: 1024px)">
+                                <source srcset="./img/cat-search01-m.svg" media="">
+                                <img src="./img/cat-search01-m.svg" alt="" />
+                            </picture>
+                            <picture class="elm-photo js-tab-block" data-tab="popup-tab02">
+                                <source srcset="./img/cat-search02.svg" media="(min-width: 1024px)">
+                                <source srcset="./img/cat-search02-m.svg" media="">
+                                <img src="./img/cat-search02-m.svg" alt="" />
+                            </picture>
+                            <picture class="elm-photo js-tab-block" data-tab="popup-tab03">
+                                <source srcset="./img/cat-search03.svg" media="(min-width: 1024px)">
+                                <source srcset="./img/cat-search03-m.svg" media="">
+                                <img src="./img/cat-search03-m.svg" alt="" />
+                            </picture>
+                        </div>
+                    </div>
+                    <!--/catalog-search-box-->
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
+        <div class="popup-outer-box popup-top popup-order" id="popup-order">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <!--main-form-box-->
+                    <div class="main-form-box cnt-section">
+                        <div class="inner-wrap">
+                            <div class="form-title-wrap">
+                                <h2 class="h2-title">Оставить заявку</h2>
+                            </div>
+                            <form action="/" class="form-inner-wrap">
+                                <div class="frm-row">
+                                    <div class="frm-field field-half">
+                                        <input type="text" class="form-input" placeholder="Имя*">
+                                    </div>
+                                    <div class="frm-field field-half">
+                                        <input type="text" class="form-input" placeholder="Компания">
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field field-half">
+                                        <input type="email" class="form-input" placeholder="E-mail*">
+                                    </div>
+                                    <div class="frm-field field-half">
+                                        <input type="text" class="form-input" placeholder="Должность">
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field field-half">
+                                        <input type="tel" class="form-input" placeholder="Номер телефона*">
+                                    </div>
+                                    <div class="frm-field field-half">
+                                        <div class="frm-field-file js-field-file">
+                                            <input type="file" class="js-field-input">
+                                            <button type="submit" class="form-input js-file-button" data-title="Прикрепить файл">
+                                                <span class="button-title">Прикрепить файл</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <textarea class="form-input" placeholder="Ваше сообщение"></textarea>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field field-button">
+                                        <button type="submit" class="btn">Отправить</button>
+                                    </div>
+                                    <div class="frm-field field-info">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих <a href="">персональных данных</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!--/main-form-box-->
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->

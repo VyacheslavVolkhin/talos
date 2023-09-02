@@ -1,6 +1,54 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-inputs {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    background: #242424;
+    padding: 0;
+    .field-input {
+        flex: 1;
+        position: relative;
+        display: block;
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: "x";
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            pointer-events: none;
+            color: rgba(142, 148, 155, 0.42);
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+        }
+    }
+    input.form-input {
+        height: 58px;
+        border-radius: 0;
+        background: none;
+        border: none;
+        text-align: center;
+        padding: 0 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    [placeholder]::-webkit-input-placeholder {color: #8E949B;}
+    [placeholder]:-moz-placeholder {color: #8E949B;}
+    [placeholder]::-moz-placeholder {color: #8E949B;}
+    [placeholder]:-ms-input-placeholder {color: #8E949B;}
+}
 .frm-field-file {
     display: block;
     position: relative;
