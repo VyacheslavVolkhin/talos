@@ -17,6 +17,9 @@
       <change beforePath="$PROJECT_DIR$/css/less/structura.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/structura.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/soc-tg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/soc-tg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/soc-wa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/soc-wa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/point01.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
@@ -105,7 +108,7 @@
       <workItem from="1692245335895" duration="1854000" />
       <workItem from="1692698951823" duration="4426000" />
       <workItem from="1693228311675" duration="23628000" />
-      <workItem from="1693555046136" duration="21191000" />
+      <workItem from="1693555046136" duration="24243000" />
     </task>
     <servers />
   </component>

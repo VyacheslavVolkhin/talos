@@ -432,7 +432,10 @@ select.form-input:required:invalid {
             max-height: 100%;
         }
         &:hover {
-            opacity: 0.8;
+            //opacity: 0.8;
+        }
+        &:not(:hover) {
+            filter: grayscale(100%) opacity(0.5);
         }
     }
 }

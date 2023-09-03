@@ -230,13 +230,14 @@ function tabsActiveStart() {
 			}
 		}
 	}
+	
 }
 
 for (i = 0; i < tabsNav.length; i++) {
 	tabsNav[i].addEventListener('click', function (e) {
 		if (e.target.closest('[data-tab]').dataset) {
 			let tabsNavElements = this.querySelector('[data-tab].active')
-			tabsNavElements.classList.remove('active')
+			tabsNavElements ? tabsNavElements.classList.remove('active') : false
 			e.target.closest('[data-tab]').classList.add('active')
 			tabsActiveStart()
 			e.preventDefault()

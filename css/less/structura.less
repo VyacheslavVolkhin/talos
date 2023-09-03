@@ -460,7 +460,7 @@ html {
                         }
                     }
                 }
-                a {
+                a, span {
                     display: block;
                     position: relative;
                     color: rgba(255, 255, 255, 0.68);
@@ -805,7 +805,7 @@ html {
                     .btn-menu {
                         margin-bottom: 1.5rem;
                     }
-                    a {
+                    a, span {
                         &:not(.btn-menu) {
                             padding: 22px 0;
                         }
@@ -830,7 +830,7 @@ html {
                     }
                 }
             }
-            a {
+            a, span {
                 display: block;
                 padding: 17px 0;
                 color: inherit;
@@ -845,6 +845,9 @@ html {
                 text-transform: uppercase;
                 margin-bottom: 2.6rem;
                 .ft;
+                &:hover {
+                    color: inherit;
+                }
             }
             .btn-submenu {
                 text-transform: uppercase;
