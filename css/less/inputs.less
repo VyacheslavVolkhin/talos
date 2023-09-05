@@ -13,6 +13,10 @@
     font-size: 16px;
     font-weight: 400;
     color: #fff;
+    &.inp-content {
+        border: 1px solid rgba(142, 148, 155, 0.49);
+        color: var(--clr-base);
+    }
 }
 textarea.form-input {
     height: 136px;
@@ -84,6 +88,111 @@ select.form-input:required:invalid {
         border-color: var(--clr-att-hover);
         color: #fff;
     }
+    &.button-content {
+        &:hover {
+            background-color: transparent;
+            border-color: var(--clr-att);
+            color: var(--clr-att);
+        }
+    }
+    &.button-result {
+        height: 47px;
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: none;
+        overflow: visible;
+        filter: drop-shadow(0px 17px 24px rgba(142, 148, 155, 0.29));
+        .fm;
+        &:before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-right-color: var(--clr-att);
+            transition: border-rcolor ease 0.2s;
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -7px;
+        }
+        &:hover {
+            &:before {
+                border-right-color: var(--clr-att-hover);
+            }
+        }
+    }
+    &.button-cat {
+        border: none;
+        &:not(:hover) {
+            background: rgba(255, 255, 255, 0.23);
+            backdrop-filter: blur(2px);
+            color: #fff;
+        }
+        &:hover {
+            background-color: var(--clr-att);
+            .button-att {
+                color: var(--clr-base);
+            }
+        }
+    }
+    &.button-more {
+        width: 100%;
+        height: 60px;
+        border-color: rgba(142, 148, 155, 0.13);
+        border-radius: 0;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        text-transform: none;
+        .fm;
+        .button-ico {
+            width: 22px;
+            height: 22px;
+            margin-left: 8px;
+        }
+        &:hover {
+            background-color: #fff;
+            border-color: var(--clr-att);
+            color: var(--clr-base);
+        }
+    }
+    &.button-delete {
+        height: 32px;
+        border-radius: 16px;
+        padding: 2px 33px 0 13px;
+        background: none;
+        border-color: #F1F2F3;
+        font-size: 14px;
+        text-transform: none;
+        font-weight: 600;
+        color: #8E949B;
+        .fm;
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: url(../img/icons/delete.svg) center no-repeat;
+            background-size: 22px auto;
+            top: 50%;
+            right: 6px;
+            margin-top: -11px;
+            filter: grayscale(100%) opacity(0.6);
+            transition: filter ease 0.2s;
+        }
+        &:hover {
+            border-color: var(--clr-att);
+            background-color: transparent;
+            color: var(--clr-att);
+            &:before {
+                filter: none;
+            }
+        }
+    }
     &.button-dark {
         height: 40px;
         padding: 0 17px 0 30px;
@@ -110,7 +219,7 @@ select.form-input:required:invalid {
             background-color: var(--clr-att);
             color: #fff;
             &:before {
-                background-color: #fff;
+                background-color: var(--clr-att);
             }
         }
     }
@@ -289,6 +398,14 @@ select.form-input:required:invalid {
         cursor: default;
         pointer-events: none;
     }
+    .button-att {
+        font-size: (14/12em);
+        font-weight: 400;
+        display: inline;
+        color: var(--clr-att);
+        transition: color ease 0.2s;
+        .ft;
+    }
 }
 .btn-action-ico {
     min-width: 0;
@@ -351,6 +468,38 @@ select.form-input:required:invalid {
             background-image: url(../img/icons/search.svg);
         }
     }
+    &.ico-search-att {
+        &:before {
+            background-image: url(../img/icons/search-att.svg);
+            background-size: 18px auto;
+        }
+    }
+    &.ico-view {
+        &:before {
+            filter: brightness(0) grayscale(1);
+        }
+        &.active, &:hover {
+            &:before {
+                filter: none;
+            }
+        }
+    }
+    &.ico-view-tiles {
+        &:before {
+            background-image: url(../img/icons/view-tiles.svg);
+        }
+    }
+    &.ico-view-rows {
+        &:before {
+            background-image: url(../img/icons/view-rows.svg);
+        }
+    }
+    &.ico-filter {
+        &:before {
+            background-image: url(../img/icons/filter.svg);
+            background-size: 32px auto;
+        }
+    }
     &.ico-arrow-up {
         &:before {
             background-image: url(../img/icons/arrow-up.svg);
@@ -384,6 +533,15 @@ select.form-input:required:invalid {
                 background-image: url(../img/icons/arrow-slider-d.svg);
                 background-size: 28px auto;
             }
+        }
+    }
+    &.ico-arrow-att {
+        &:before {
+            background-image: url(../img/icons/arrow-slider-att.svg);
+            .t-rotate(180deg);
+        }
+        &.ico-arrow-prev {
+            .t-rotate(180deg);
         }
     }
     &.ico-arrow-prev {
@@ -439,6 +597,28 @@ select.form-input:required:invalid {
         }
     }
 }
+[data-count] {
+    overflow: visible;
+    &:after {
+        content: attr(data-count);
+        min-width: 19px;
+        height: 19px;
+        line-height: 19px;
+        padding: 0 4px;
+        border-radius: 10px;
+        background-color: var(--clr-att);
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        right: auto;
+        top: auto;
+        z-index: 2;
+    }
+}
 .btn-header-mobile {
     display: block;
     position: relative;
@@ -454,6 +634,62 @@ select.form-input:required:invalid {
         width: 100%;
         height: 26px;
         margin-bottom: 2px;
+    }
+}
+.btn-action-arrow {
+    display: inline-flex;
+    position: relative;
+    min-height: 30px;
+    padding: 0 0 0 39px;
+    line-height: 1.1;
+    font-weight: 600;
+    align-items: center;
+    transition: all ease 0.2s;
+    &:not(:hover) {
+        color: inherit;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(142, 148, 155, 0.35);
+        background: url(../img/icons/arrow-toggle.svg) center no-repeat;
+        background-size: 24px auto;
+        top: 50%;
+        left: 0;
+        margin-top: -15px;
+        .t-rotate(90deg);
+        transition: all ease 0.2s;
+    }
+    &:hover {
+        color: var(--clr-att);
+    }
+}
+.btn-action-back {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    padding: 0 0 0 50px;
+    line-height: 40px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #7E838A;
+    &:hover {
+        color: var(--clr-att);
+        .btn-action-ico {
+            border-color: var(--clr-att);
+        }
+    }
+    .btn-action-ico {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid rgba(142, 148, 155, 0.49);
+        border-radius: 50%;
+        transition: border-color ease 0.2s;
     }
 }
 .btn-action-scroll {
@@ -555,6 +791,11 @@ select.form-input:required:invalid {
         }
     }
     .btn-action-ico {
+        &.ico-search-att {
+            &:before {
+                background-size: 20px auto;
+            }
+        }
         &.ico-arrow {
             width: 7.4rem;
             height: 7.4rem;
@@ -580,6 +821,9 @@ select.form-input:required:invalid {
                 margin-top: -11px;
             }
         }
+    }
+    .btn-action-arrow {
+        padding-left: 42px;
     }
     .btn-popup-menu {
         width: 143px;

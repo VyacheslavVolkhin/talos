@@ -1,6 +1,144 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-catalog {
+    padding: 20px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-size: 16px;
+    line-height: (22/16);
+    font-weight: 600;
+    color: var(--clr-base);
+    position: relative;
+    &:hover {
+        z-index: 5;
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: linear-gradient(-45deg, #F91C1C, #F91C1C00, #F91C1C);
+        box-shadow: 0px 17px 24px 0px rgba(142, 148, 155, 0.29);
+        //transition: opacity ease 0.2s;
+        opacity: 0;
+    }
+    &:after {
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        background: #fff;
+        z-index: 2;
+    }
+    .tile-features-wrap {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .tile-price-wrap {
+        display: none;
+    }
+    .tile-counter-wrap {
+        display: none;
+    }
+    .tile-photo-wrap {
+        display: block;
+        position: relative;
+        width: 100%;
+        flex-shrink: 0;
+        z-index: 3;
+    }
+    .tile-order-wrap {
+        position: absolute;
+        top: 148px;
+        left: 0;
+        right: 0;
+        margin-top: -20px;
+        text-align: center;
+        .btn {
+            z-index: 10;
+            padding: 0 24px;
+            width: 213px;
+            font-size: 12px;
+            font-weight: bold;
+            height: 65px;
+            .button-att {
+                margin-left: 3px;
+            }
+        }
+    }
+    .tile-info-wrap {
+        display: block;
+        padding-top: 18px;
+        flex-shrink: 0;
+        z-index: 3;
+        position: relative;
+    }
+    .tile-feature-row {
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+    .tile-colors-wrap {
+        margin: 0 -8px -8px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tile-title {
+        font-size: 26px;
+        line-height: 1;
+        font-weight: bold;
+        margin: 0 0 3px 0;
+    }
+    .tile-info {
+        display: block;
+    }
+    .tile-sl-wrap {
+        &~.tile-sl-wrap {
+            display: none;
+        }
+    }
+    .tile-photo {
+        aspect-ratio: inherit;
+        height: 256px;
+    }
+    .tile-ico {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 216px;
+        right: 24px;
+    }
+    .slick-dots {
+        li {
+            margin: 0 4px 4px 4px;
+            button {
+                width: 30px;
+                height: 1px;
+                background-color: #C5CED9;
+            }
+            &.slick-active {
+                button {
+                    background-color: var(--clr-att);
+                }
+            }
+        }
+    }
+    .tile-color {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        z-index: 6;
+        margin: 0 8px 8px 0;
+        flex-shrink: 0;
+    }
+    .fm;
+}
 .item-tile-prop {
     padding: 13px 0;
     display: flex;
@@ -143,6 +281,20 @@
         height: 100px;
         aspect-ratio: inherit;
     }
+    .button-rounded {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        margin-top: -45px;
+        z-index: 2;
+        opacity: 0;
+        &.btn {
+            width: 74px;
+            height: 74px;
+            font-size: 10px;
+        }
+    }
 }
 .item-tile-catalog-main {
     display: block;
@@ -241,6 +393,25 @@
         }
     }
 }
+.elm-color, .tile-color {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    line-height: 1;
+    &:hover {
+        opacity: 0.5;
+    }
+    img, svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
 .elm-photo, .tile-photo {
     display: block;
     position: relative;
@@ -248,6 +419,10 @@
     text-decoration: none;
     line-height: 1;
     //transform: translateZ(0);
+    &.photo-no {
+        background: url(../img/noimage.svg) center no-repeat;
+        background-size: 55% auto;
+    }
     &.photo-main {
         border: 1px solid #f00;
         width: 300px;
@@ -317,6 +492,23 @@
         &:after {
             content: ' ' attr(data-unit);
         }
+    }
+}
+.tile-feature-row, .elm-feature-row {
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 26px;
+    font-weight: 600;
+    color: #8E949B;
+    .tile-feature-title {
+        flex: 1;
+        max-width: 100%;
+    }
+    .tile-feature-value {
+        flex-shrink: 0;
+        font-size: 20px;
+        color: var(--clr-base);
     }
 }
 .elm-ico, .button-ico, .menu-ico, .frm-ico, .tab-ico, .tile-ico, .lbl-ico {
@@ -476,6 +668,29 @@
     }
 }
 @media (min-width: 1024px) {
+    .item-tile-catalog-second {
+        &:hover {
+            .button-rounded {
+                opacity: 1;
+            }
+        }
+        .button-rounded {
+            display: flex;
+        }
+    }
+    .item-tile-catalog {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+        &:hover {
+            &:before, &:after {
+                opacity: 1;
+            }
+        }
+        .tile-ico {
+            right: 0;
+            bottom: 5px;
+        }
+    }
     .item-tile-prop {
         font-size: 18px;
         line-height: 29.5px;
@@ -491,8 +706,8 @@
         }
     }
     .item-tile-main {
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 1.8rem;
+        line-height: (28/18);
         .tile-photo-wrap {
             &:before {
                 display: none;
@@ -509,6 +724,15 @@
         .tile-text {
             text-align: left;
             display: block;
+            max-height: 15em;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding-right: 20px;
+            &::-webkit-scrollbar {
+                height: 1px;
+                width: 1px;
+                background-color: #D9D9D9;
+            }
         }
         .tile-photo {
             height: 39rem;
@@ -591,9 +815,99 @@
             margin-left: -11.5rem;
         }
     }
+    .tile-feature-row, .elm-feature-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-weight: 600;
+        .tile-feature-title,
+        .tile-feature-value {
+            font-size: 1em;
+            font-weight: inherit;
+        }
+    }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
     .item-tile-catalog-main {
         
+    }
+}
+@media (min-width: 1400px) {
+    .view-rows {
+        .item-tile-catalog {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 8px 4rem 30px 3rem;
+            .tile-photo-wrap {
+                width: 256px;
+                flex-shrink: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .tile-info-wrap {
+                flex: 1;
+                padding: 2.5rem 7rem 0 5rem;
+                margin: 0;
+            }
+            .tile-title-wrap {
+                display: block;
+                max-width: 320px;
+                margin-bottom: 6px;
+            }
+            .tile-price-inner-wrap {
+                width: 204px;
+                flex-shrink: 0;
+                margin: 0;
+                padding: 3rem 0 0 0;
+                display: block;
+                position: relative;
+            }
+            .tile-counter-wrap {
+                margin-bottom: 20px;
+                display: block;
+                position: relative;
+                z-index: 6;
+            }
+            .tile-price-wrap {
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 600;
+                margin-bottom: 14px;
+                display: block;
+                position: relative;
+                z-index: 5;
+            }
+            .tile-order-wrap {
+                display: block;
+                width: 100%;
+                position: static;
+                margin: 0;
+                padding: 0;
+                .btn {
+                    width: 100%;
+                    &.button-cat {
+                        height: 61px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        &:not(:hover) {
+                            background: var(--clr-base);
+                        }
+                    }
+                }
+            }
+            .tile-features-wrap {
+                margin-bottom: 15px;
+            }
+            .tile-title {
+                margin-bottom: 8px;
+            }
+            .tile-feature-row {
+                margin-bottom: 2px;
+                &~.tile-feature-row {
+                    display: flex;
+                }
+            }
+        }
     }
 }

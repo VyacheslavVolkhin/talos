@@ -1,6 +1,9 @@
 $(window).on('load', function () {
 
 
+	
+
+
 	//popups
 	let popupCurrent;
 	$('.js-popup-open').on('click', function () {
@@ -23,6 +26,25 @@ $(window).on('load', function () {
 			return false;
 		}
 	})
+
+
+	//item-tile-catalog
+	if (!!$('.item-tile-catalog').offset()) {
+		$('.item-tile-catalog .tile-slider').slick({
+			dots: true,
+			slidesToShow: 1,
+			variableWidth: false,
+			infinite: true,
+			adaptiveHeight: false,
+			rows: 1,
+			swipeToSlide: true,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			prevArrow: false,
+			nextArrow: false,
+		});
+
+	}
 	
 	
 	//main-tiles-slider-box
@@ -66,8 +88,253 @@ $(window).on('load', function () {
 		});
 
 	}
+
+
+	//#range01
+	if (!!$('#range01').offset()) {
+		$('#range01').slider({
+			range: true,
+			min: 189,
+			max: 1336,
+			values: [189, 1336],
+			slide: function (event, ui) {
+				$('#range01-min').val(ui.values[0]);
+				$('#range01-max').val(ui.values[1]);
+			}
+		})
+		$('#range01-min').val($('#range01').slider('values', 0));
+		$('#range01-max').val($('#range01').slider('values', 1));
+		$('#range01-min').bind('focusout', function () {
+			if ($(this).val() > $('#range01').slider('values', 1)) {
+				$(this).val($('#range01').slider('values', 0));
+			}
+			$('#range01').slider('values', 0, $(this).val());
+		})
+		$('#range01-max').bind('focusout', function () {
+			if ($(this).val() < $('#range01').slider('values', 0)) {
+				$(this).val($('#range01').slider('values', 1));
+			}
+			$('#range01').slider('values', 1, $(this).val());
+		})
+		$('#range01-min').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() > $('#range01').slider('values', 1)) {
+					$(this).val($('#range01').slider('values', 0));
+				}
+				$('#range01').slider('values', 0, $(this).val());
+			}
+		})
+		$('#range01-max').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() < $('#range01').slider('values', 0)) {
+					$(this).val($('#range01').slider('values', 1));
+				}
+				$('#range01').slider('values', 1, $(this).val());
+			}
+		})
+		$('#widget').draggable();
+	}
+	//#range02
+	if (!!$('#range02').offset()) {
+		$('#range02').slider({
+			range: true,
+			min: 189,
+			max: 1336,
+			values: [189, 1336],
+			slide: function (event, ui) {
+				$('#range02-min').val(ui.values[0]);
+				$('#range02-max').val(ui.values[1]);
+			}
+		})
+		$('#range02-min').val($('#range02').slider('values', 0));
+		$('#range02-max').val($('#range02').slider('values', 1));
+		$('#range02-min').bind('focusout', function () {
+			if ($(this).val() > $('#range02').slider('values', 1)) {
+				$(this).val($('#range02').slider('values', 0));
+			}
+			$('#range02').slider('values', 0, $(this).val());
+		})
+		$('#range02-max').bind('focusout', function () {
+			if ($(this).val() < $('#range02').slider('values', 0)) {
+				$(this).val($('#range02').slider('values', 1));
+			}
+			$('#range02').slider('values', 1, $(this).val());
+		})
+		$('#range02-min').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() > $('#range02').slider('values', 1)) {
+					$(this).val($('#range02').slider('values', 0));
+				}
+				$('#range02').slider('values', 0, $(this).val());
+			}
+		})
+		$('#range02-max').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() < $('#range02').slider('values', 0)) {
+					$(this).val($('#range02').slider('values', 1));
+				}
+				$('#range02').slider('values', 1, $(this).val());
+			}
+		})
+		$('#widget').draggable();
+	}
+	//#range03
+	if (!!$('#range03').offset()) {
+		$('#range03').slider({
+			range: true,
+			min: 189,
+			max: 1336,
+			values: [189, 1336],
+			slide: function (event, ui) {
+				$('#range03-min').val(ui.values[0]);
+				$('#range03-max').val(ui.values[1]);
+			}
+		})
+		$('#range03-min').val($('#range03').slider('values', 0));
+		$('#range03-max').val($('#range03').slider('values', 1));
+		$('#range03-min').bind('focusout', function () {
+			if ($(this).val() > $('#range03').slider('values', 1)) {
+				$(this).val($('#range03').slider('values', 0));
+			}
+			$('#range03').slider('values', 0, $(this).val());
+		})
+		$('#range03-max').bind('focusout', function () {
+			if ($(this).val() < $('#range03').slider('values', 0)) {
+				$(this).val($('#range03').slider('values', 1));
+			}
+			$('#range03').slider('values', 1, $(this).val());
+		})
+		$('#range03-min').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() > $('#range03').slider('values', 1)) {
+					$(this).val($('#range03').slider('values', 0));
+				}
+				$('#range03').slider('values', 0, $(this).val());
+			}
+		})
+		$('#range03-max').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() < $('#range03').slider('values', 0)) {
+					$(this).val($('#range03').slider('values', 1));
+				}
+				$('#range03').slider('values', 1, $(this).val());
+			}
+		})
+		$('#widget').draggable();
+	}
+	//#range04
+	if (!!$('#range04').offset()) {
+		$('#range04').slider({
+			range: true,
+			min: 0.6,
+			max: 341.7,
+			step: 0.1,
+			values: [0.6, 341.7],
+			slide: function (event, ui) {
+				$('#range04-min').val(ui.values[0]);
+				$('#range04-max').val(ui.values[1]);
+			}
+		})
+		$('#range04-min').val($('#range04').slider('values', 0));
+		$('#range04-max').val($('#range04').slider('values', 1));
+		$('#range04-min').bind('focusout', function () {
+			if ($(this).val() > $('#range04').slider('values', 1)) {
+				$(this).val($('#range04').slider('values', 0));
+			}
+			$('#range04').slider('values', 0, $(this).val());
+		})
+		$('#range04-max').bind('focusout', function () {
+			if ($(this).val() < $('#range04').slider('values', 0)) {
+				$(this).val($('#range04').slider('values', 1));
+			}
+			$('#range04').slider('values', 1, $(this).val());
+		})
+		$('#range04-min').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() > $('#range04').slider('values', 1)) {
+					$(this).val($('#range04').slider('values', 0));
+				}
+				$('#range04').slider('values', 0, $(this).val());
+			}
+		})
+		$('#range04-max').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() < $('#range04').slider('values', 0)) {
+					$(this).val($('#range04').slider('values', 1));
+				}
+				$('#range04').slider('values', 1, $(this).val());
+			}
+		})
+		$('#widget').draggable();
+	}
+	//#range05
+	if (!!$('#range05').offset()) {
+		$('#range05').slider({
+			range: true,
+			min: 1.8,
+			max: 27.2,
+			step: 0.1,
+			values: [1.8, 27.2],
+			slide: function (event, ui) {
+				$('#range05-min').val(ui.values[0]);
+				$('#range05-max').val(ui.values[1]);
+			}
+		})
+		$('#range05-min').val($('#range05').slider('values', 0));
+		$('#range05-max').val($('#range05').slider('values', 1));
+		$('#range05-min').bind('focusout', function () {
+			if ($(this).val() > $('#range05').slider('values', 1)) {
+				$(this).val($('#range05').slider('values', 0));
+			}
+			$('#range05').slider('values', 0, $(this).val());
+		})
+		$('#range05-max').bind('focusout', function () {
+			if ($(this).val() < $('#range05').slider('values', 0)) {
+				$(this).val($('#range05').slider('values', 1));
+			}
+			$('#range05').slider('values', 1, $(this).val());
+		})
+		$('#range05-min').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() > $('#range05').slider('values', 1)) {
+					$(this).val($('#range05').slider('values', 0));
+				}
+				$('#range05').slider('values', 0, $(this).val());
+			}
+		})
+		$('#range05-max').bind('keypress', function (e) {
+			if (e.keyCode == 13) {
+				if ($(this).val() < $('#range05').slider('values', 0)) {
+					$(this).val($('#range05').slider('values', 1));
+				}
+				$('#range05').slider('values', 1, $(this).val());
+			}
+		})
+		$('#widget').draggable();
+	}
 	
 });
+
+
+//catalog actions view
+if (document.querySelector('.js-button-rows')) {
+	document.querySelector('.js-button-rows').addEventListener('click', function (e) {
+		document.querySelector('.js-button-tiles').classList.remove('active')
+		this.classList.add('active')
+		document.querySelector('.catalog-box').classList.add('view-rows')
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+	document.querySelector('.js-button-tiles').addEventListener('click', function (e) {
+		document.querySelector('.js-button-rows').classList.remove('active')
+		this.classList.add('active')
+		document.querySelector('.catalog-box').classList.remove('view-rows')
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
 
 //js popup wrap
 const togglePopupButtons = document.querySelectorAll('.js-btn-popup-toggle')
@@ -168,9 +435,11 @@ popupElements.forEach(element => {
 				popupElementButton.insertAdjacentHTML('beforeend', popupElementActive)
 				popupElementsClear()
 				popupElementsClose()
-				e.preventDefault()
-				e.stopPropagation()
-				return false
+				if (!this.closest('.js-tabs-nav')) {
+					e.preventDefault()
+					e.stopPropagation()
+					return false
+				}
 			})
 		}
 	}
@@ -235,7 +504,7 @@ function tabsActiveStart() {
 
 for (i = 0; i < tabsNav.length; i++) {
 	tabsNav[i].addEventListener('click', function (e) {
-		if (e.target.closest('[data-tab]').dataset) {
+		if (e.target.closest('[data-tab]')) {
 			let tabsNavElements = this.querySelector('[data-tab].active')
 			tabsNavElements ? tabsNavElements.classList.remove('active') : false
 			e.target.closest('[data-tab]').classList.add('active')
@@ -247,3 +516,93 @@ for (i = 0; i < tabsNav.length; i++) {
 	})
 }
 tabsActiveStart()
+
+//input range
+const rangeInputs = document.querySelectorAll('input[type="range"]')
+for (i = 0; i < rangeInputs.length; i++) {
+	let target = rangeInputs[i]
+	const min = target.min
+	const max = target.max
+	const val = target.value
+	let percentage = (val - min) * 100 / (max - min)
+	target.style.backgroundSize = percentage + '% 100%'
+	rangeResult = rangeInputs[i].value
+	rangeInputs[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
+	rangeInputs[i].addEventListener('change', function (e) {
+		rangeResult = this.value
+		this.parentNode.querySelector('.field-range-result').textContent = rangeResult
+	})
+}
+
+function handleInputChange(e) {
+	let target = e.target
+	const min = target.min
+	const max = target.max
+	const val = target.value
+	let percentage = (val - min) * 100 / (max - min)
+	target.style.backgroundSize = percentage + '% 100%'
+	for (i = 0; i < rangeInputs.length; i++) {
+		rangeResult = rangeInputs[i].value
+		rangeInputs[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
+		rangeInputs[i].addEventListener('change', function (e) {
+			rangeResult = this.value
+			this.parentNode.querySelector('.field-range-result').textContent = rangeResult
+		})
+	}
+}
+
+rangeInputs.forEach(input => {
+	input.addEventListener('input', handleInputChange)
+})
+
+
+
+//filter toggle
+const filterButtonToggle = document.querySelectorAll('.js-filter-toggle')
+const filterBox = document.querySelector('.js-filter')
+for (i = 0; i < filterButtonToggle.length; i++) {
+	filterButtonToggle[i].addEventListener('click', function(e) {
+		filterBox.classList.toggle('active')
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
+
+
+//field counter
+let fieldCounter = document.getElementsByClassName('frm-field-counter')
+
+function fieldCounterButtons(index) {
+	return `
+        <button class="btn field-counter-button" data-index="${index}" data-type="plus"></button>
+        <button class="btn field-counter-button" data-index="${index}" data-type="minus"></button>
+    `
+}
+
+function fieldCounterCreator() {
+	for (i = 0; i < fieldCounter.length; i++) {
+		fieldCounter[i].insertAdjacentHTML('beforeend', fieldCounterButtons(i))
+		fieldCounter[i].onclick = function (event) {
+			const type = event.target.dataset.type
+			const index = event.target.dataset.index
+			if (index) {
+				const fieldCounterPlus = fieldCounter[index].children[1]
+				const fieldCounterMinus = fieldCounter[index].children[2]
+				const fieldCounterInput = fieldCounter[index].children[0]
+				if (type === 'plus') {
+					fieldCounterInput.value = Number(fieldCounterInput.value) + 1
+				} else if (type === 'minus') {
+					fieldCounterInput.value = Number(fieldCounterInput.value) - 1
+				}
+				if (Number(fieldCounterInput.value) > 0) {
+					fieldCounterMinus.removeAttribute('disabled')
+				} else if (Number(fieldCounterInput.value) < 1) {
+					fieldCounterMinus.setAttribute('disabled', true)
+				}
+			}
+		}
+	}
+}
+
+fieldCounterCreator();
