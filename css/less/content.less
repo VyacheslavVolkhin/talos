@@ -83,6 +83,29 @@
             color: var(--clr-att);
         }
     }
+    .photo-inner-wrap {
+        &.photo-first-inner {
+            .elm-photo {
+                &:after {
+                    background-image: url(../img/main/decor-line-first.svg);
+                }
+            }
+        }
+        &.photo-second-inner {
+            .elm-photo {
+                &:after {
+                    background-image: url(../img/main/decor-line-second.svg);
+                }
+            }
+        }
+        &.photo-third-inner {
+            .elm-photo {
+                &:after {
+                    background-image: url(../img/main/decor-line-third.svg);
+                }
+            }
+        }
+    }
     .elm-photo {
         overflow: visible;
         z-index: 2;
@@ -1897,6 +1920,11 @@ body.popup-open {
                     bottom: -4rem;
                 }
             }
+            &.photo-first-inner {
+                .elm-phto {
+                    
+                }
+            }
             &.photo-second-inner {
                 margin-top: -9rem;
                 .elm-photo {
@@ -1904,10 +1932,21 @@ body.popup-open {
                         margin: 0 auto;
                         max-width: 45.3rem;
                     }
+                    &:after {
+                        left: -8rem;
+                        bottom: -1rem;
+                    }
                 }
             }
             &.photo-third-inner {
                 .elm-photo {
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: inherit;
+                    &:after {
+                        left: -9rem;
+                        bottom: -2rem;
+                    }
                 }
             }
             &.photo-second {

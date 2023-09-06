@@ -2493,6 +2493,15 @@ body {
 .case-tab-box .btn-action-arrow:hover {
   color: var(--clr-att);
 }
+.case-tab-box .photo-inner-wrap.photo-first-inner .elm-photo:after {
+  background-image: url(../img/main/decor-line-first.svg);
+}
+.case-tab-box .photo-inner-wrap.photo-second-inner .elm-photo:after {
+  background-image: url(../img/main/decor-line-second.svg);
+}
+.case-tab-box .photo-inner-wrap.photo-third-inner .elm-photo:after {
+  background-image: url(../img/main/decor-line-third.svg);
+}
 .case-tab-box .elm-photo {
   overflow: visible;
   z-index: 2;
@@ -4413,6 +4422,19 @@ body.popup-open {
   .case-tab-box .photo-inner-wrap.photo-second-inner .elm-photo img {
     margin: 0 auto;
     max-width: 45.3rem;
+  }
+  .case-tab-box .photo-inner-wrap.photo-second-inner .elm-photo:after {
+    left: -8rem;
+    bottom: -1rem;
+  }
+  .case-tab-box .photo-inner-wrap.photo-third-inner .elm-photo {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: inherit;
+  }
+  .case-tab-box .photo-inner-wrap.photo-third-inner .elm-photo:after {
+    left: -9rem;
+    bottom: -2rem;
   }
   .case-tab-box .photo-inner-wrap.photo-second {
     padding-top: 3rem;
