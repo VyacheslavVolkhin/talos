@@ -516,6 +516,12 @@ body {
 .wrap.wrap-dark {
   background-color: #1b1b1b;
 }
+.wrap.wrap-lines {
+  background-color: #1b1b1b;
+}
+.wrap.wrap-lines .footer {
+  display: none;
+}
 .mobile-panel-box {
   display: block;
   z-index: 100;
