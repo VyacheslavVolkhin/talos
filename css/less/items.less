@@ -543,6 +543,49 @@
         display: block;
     }
 }
+.elm-point-dot {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+    margin-left: -26px;
+    z-index: 10;
+    cursor: pointer;
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url(../img/main/decor-dot.svg) center no-repeat;
+        background-size: 100% auto;
+        transition: opacity ease 0.2s;
+    }
+    &:after {
+        width: 124px;
+        height: 124px;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin: -62px 0 0 -62px;
+        background-image: url(../img/main/decor-dot-active.svg);
+        pointer-events: none;
+        opacity: 0;
+    }
+    &.active {
+        &:before {
+            opacity: 0;
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+}
 .elm-point {
     display: block;
     position: relative;
@@ -825,6 +868,12 @@
             font-size: 1em;
             font-weight: inherit;
         }
+    }
+    .elm-point-dot {
+        width: 56px;
+        height: 56px;
+        margin-top: -28px;
+        margin-left: -28px;
     }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
