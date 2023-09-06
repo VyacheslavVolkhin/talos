@@ -4407,6 +4407,16 @@ body.popup-open {
     left: -12rem;
     bottom: -4rem;
   }
+  .case-tab-box .photo-inner-wrap.photo-second-inner {
+    margin-top: -9rem;
+  }
+  .case-tab-box .photo-inner-wrap.photo-second-inner .elm-photo img {
+    margin: 0 auto;
+    max-width: 45.3rem;
+  }
+  .case-tab-box .photo-inner-wrap.photo-second {
+    padding-top: 3rem;
+  }
   .case-tab-box .photo-inner-wrap.photo-second {
     padding-top: 3rem;
   }
