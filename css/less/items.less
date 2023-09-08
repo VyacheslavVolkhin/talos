@@ -234,6 +234,18 @@
     .tile-photo {
         aspect-ratio: inherit;
         height: 146px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: fade(#f00, 30);
+            opacity: 0;
+            transition: opacity ease 0.2s;
+        }
     }
     .tile-text {
         display: none;

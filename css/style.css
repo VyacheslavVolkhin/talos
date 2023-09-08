@@ -1628,6 +1628,18 @@ body {
   aspect-ratio: inherit;
   height: 146px;
 }
+.item-tile-main .tile-photo:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity ease 0.2s;
+}
 .item-tile-main .tile-text {
   display: none;
 }
@@ -5016,6 +5028,9 @@ body.popup-open {
   }
   .main-tiles-slider-box .slick-list .slick-slide:not(.slick-active) .item-tile-main .tile-text {
     opacity: 0;
+  }
+  .main-tiles-slider-box .slick-list .slick-slide:not(.slick-active) .item-tile-main .tile-photo:after {
+    opacity: 1;
   }
   .main-catalog-box {
     position: relative;
