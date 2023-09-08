@@ -23,6 +23,11 @@ $(window).on('load', function () {
 	//popups
 	let popupCurrent;
 	$('.js-popup-open').on('click', function () {
+		if ($(window).innerWidth() > 1023) {
+			if ($(this).hasClass('popup-mobile')) {
+				return false;
+			}
+		}
 		$('.js-btn-popup-tgl.active').removeClass('active');
 		if ($(this).hasClass('js-btn-popup-tgl')) {
 			$(this).addClass('active');
