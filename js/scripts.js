@@ -31,6 +31,8 @@ $(window).on('load', function () {
 		$('body').addClass('popup-open');
 		popupCurrent = $(this).attr('data-popup');
 		$('.popup-outer-box[id="' + popupCurrent + '"]').addClass('active');
+		popupElementsClear()
+		popupElementsClose()
 		return false;
 	})
 	$('.js-popup-close').on('click', function () {
@@ -45,6 +47,8 @@ $(window).on('load', function () {
 			$('body').removeClass('popup-open-scroll');
 			$('.js-btn-popup-tgl.active').removeClass('active');
 			$('.popup-outer-box').removeClass('active');
+			popupElementsClear()
+			popupElementsClose()
 			return false;
 		}
 	})
