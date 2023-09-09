@@ -562,6 +562,9 @@ html {
     }
 }
 @media (min-width: 1024px) {
+    .menu-show {
+        overflow: hidden;
+    }
     .mobile-panel-box {
         display: none;
     }
@@ -765,6 +768,7 @@ html {
             z-index: 10;
             width: 100vw;
             min-height: calc(100dvh - 10rem);
+            height: calc(100dvh - 10rem);
             display: none;
             padding: 0 150px 0 30.5rem;
             &:before {
@@ -807,6 +811,17 @@ html {
                 bottom: 5px;
                 z-index: 10;
                 pointer-events: none;
+            }
+        }
+        .menu-scroll-wrap1 {
+            max-height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
             }
         }
         .btn-popup {
