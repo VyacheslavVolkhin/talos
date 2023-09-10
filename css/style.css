@@ -1739,6 +1739,11 @@ body {
 .item-tile-accessories .tile-photo {
   aspect-ratio: 1/1;
 }
+.item-tile-accessories [disabled],
+.item-tile-accessories .button-disabled {
+  cursor: default;
+  pointer-events: none;
+}
 .item-tile-document {
   display: -ms-flexbox;
   display: flex;

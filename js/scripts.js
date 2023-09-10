@@ -724,3 +724,16 @@ for (i = 0; i < tglButtons.length; i++) {
 		return false
 	})
 }
+
+
+//js tab features activate
+const buttonTabFeaturesActivate = document.querySelector('.js-tab-features-activate')
+const buttonTabFeatureTop = document.querySelector('.tabs-box').offsetTop - 50
+console.log(buttonTabFeatureTop)
+buttonTabFeaturesActivate.addEventListener('click', function(e) {
+	document.querySelector('.btn-tab[data-tab=card-tab02]').click()
+	window.scrollTo({top: buttonTabFeatureTop, behavior: 'smooth'})
+	e.preventDefault()
+	e.stopPropagation()
+	return false
+})
