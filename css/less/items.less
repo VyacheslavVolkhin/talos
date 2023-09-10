@@ -1,6 +1,127 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-order {
+    font-size: 14px;
+    line-height: (18/14);
+    display: flex;
+    align-items: flex-start;
+    padding: 19px 3rem 19px 16px;
+    .tile-photo-wrap {
+        width: 114px;
+        flex-shrink: 0;
+        padding-top: 10px;
+    }
+    .tile-info-wrap {
+        display: block;
+        flex: 1;
+        padding: 0 3rem 0 2.4rem;
+    }
+    .tile-features-wrap {
+        display: flex;
+        margin-bottom: 8px;
+        margin-left: 0;
+        margin-right: -15px;
+        flex-wrap: wrap;
+    }
+    .tile-feature-wrap {
+        display: flex;
+        flex-shrink: 0;
+        width: 50%;
+        max-width: 22.8rem;
+        padding: 0 15px 0 0;
+        flex-wrap: wrap;
+        &.f-main {
+            font-size: 16px;
+        }
+    }
+    .tile-total-wrap {
+        width: auto;
+        flex-shrink: 0;
+        max-width: 150px;
+        min-width: 110px;
+        padding-top: 20px;
+    }
+    .tile-price-wrap {
+        text-align: right;
+        margin-bottom: 0;
+    }
+    .tile-counter-wrap {
+        display: block;
+    }
+    .tile-ext-wrap {
+        display: block;
+    }
+    .tile-price {
+        font-size: 24px;
+        font-weight: bold;
+        &:after {
+            font-weight: 400;
+        }
+    }
+    .tile-ext-list {
+        margin: 15px 0 0 0;
+        li {
+            margin-bottom: 4px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .tile-ext-title {
+        display: block;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+        margin: 8px 0 0 0;
+        .btn-action-ico {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -2px 0 0 9px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .tile-title {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .tile-photo {
+        aspect-ratio: 114/90;
+    }
+    .tile-info {
+        font-size: 14px;
+        color: #8E949B;
+    }
+    .f-title {
+        color: #8E949B;
+        display: block;
+        flex-shrink: 0;
+        margin: 0 12px 0 0;
+        font-weight: 400;
+    }
+    .frm-field-counter {
+        width: 110px;
+        margin: 0 0 0 auto;
+    }
+    .f-value {
+        color: var(--clr-base);
+    }
+    a {
+        &:not(:hover) {
+            color: inherit;
+        }
+    }
+    .btn-action-ico.ico-del {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+}
 .item-tile-accessories {
     display: flex;
     flex-direction: column;
@@ -976,6 +1097,7 @@
     }
 }
 @media (max-width: 1023px) {
+    
     .item-tile-document {
         align-items: flex-start;
         .tile-info {
@@ -992,6 +1114,121 @@
     }
     .item-tile-main {
         cursor: pointer;
+    }
+}
+@media (max-width: 639px) {
+    .item-tile-order {
+        display: block;
+        .tile-photo-wrap {
+            margin: 0 auto;
+            width: 114px;
+        }
+        .tile-info-wrap {
+            padding: 0;
+            width: 100%;
+        }
+        .tile-total-wrap {
+            text-align: center;
+            width: 100%;
+            max-width: inherit;
+        }
+        .tile-price-wrap {
+            text-align: center;
+        }
+        .frm-field-counter {
+            margin: 0 auto;
+        }
+    }
+    @supports (display: contents) {
+        .item-tile-order {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 10px 0;
+            position: relative;
+            align-items: center;
+            .tile-price-wrap {
+                margin-bottom: 10px;
+                text-align: right;
+            }
+            .tile-photo-wrap {
+                width: 100px;
+                order: 1;
+                padding: 0;
+                margin: 0 0 8px 0;
+            }
+            .tile-features-wrap {
+                display: block;
+                padding: 0 0 0 16px;
+                order: 2;
+                max-width: calc(100% - 100px);
+                width: calc(100% - 100px);
+                flex-shrink: 0;
+            }
+            .tile-ext-list {
+                margin-top: 10px;
+                padding-bottom: 8px;
+            }
+            .tile-feature-wrap {
+                width: 100%;
+                max-width: inherit;
+                min-width: 0;
+                padding: 0 0 0 0;
+                margin: 0 0 10px 0;
+                &.f-main {
+                    font-size: 1em;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .tile-title-wrap {
+                flex: 1;
+                margin: 0;
+                padding: 0 15px 0 0;
+                max-width: calc(100% - 110px);
+                width: calc(100% - 110px);
+                order: 3;
+            }
+            .tile-total-wrap {
+                width: 110px;
+                order: 4;
+                flex-shrink: 0;
+                margin: 0;padding: 0;
+            }
+            .tile-ext-wrap {
+                width: 100%;
+                flex-shrink: 0;
+                min-width: 100%;
+                padding: 0;
+                margin: 0;
+                order: 5;
+            }
+            .tile-info-wrap {
+                display: contents;
+                padding: 0;
+                margin: 0;
+            }
+            .tile-title {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .tile-price {
+                font-size: 21px;
+            }
+            .tile-info {
+                
+            }
+            .btn-action-ico.ico-del {
+                width: 24px;
+                height: 24px;
+                top: 10px;
+                right: -8px;
+                left: auto;
+                margin: 0;
+                z-index: 3;
+            }
+        }
     }
 }
 @media (min-width: 1024px) {
@@ -1173,7 +1410,21 @@
         margin-left: -28px;
     }
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .item-tile-order {
+        .tile-photo-wrap {
+            width: 100px;
+        }
+    }
+}
 @media (min-width: 1024px) and (max-width: 1399px) {
+    .item-tile-order {
+        padding-left: 0;
+        padding-right: 15px;
+        .btn-action-ico.ico-del {
+            margin-left: 0;
+        }
+    }
     .item-tile-catalog-main {
         
     }

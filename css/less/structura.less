@@ -119,6 +119,18 @@ html {
         }
     }
 }
+.wrap-no-footer {
+    &.wrap {
+        padding-bottom: 0;
+    }
+    .footer, .mobile-panel-box {
+        display: none;
+    }
+    .page-full {
+        display: flex;
+        flex-direction: column;
+    }
+}
 .mobile-panel-box {
     display: block;
     z-index: 100;
@@ -385,6 +397,18 @@ html {
     }
 }
 @media (max-width: 1023px) {
+    .wrap-no-mobile-footer, .wrap-no-footer {
+        .page-full {
+            display: flex;
+            flex-direction: column;
+        }
+        &.wrap {
+            padding-bottom: 0;
+        }
+        .footer, .mobile-panel-box {
+            display: none;
+        }
+    }
     .section-mobile-full {
         margin-left: calc(var(--paddingContainer) * -1);
         margin-right: calc(var(--paddingContainer) * -1);
