@@ -264,21 +264,21 @@
     background: #fff;
     position: relative;
     transition: box-shadow ease 0.2s;
-    &:hover {
+    &:hover, &.active {
         color: var(--clr-base);
         box-shadow: 0px 12px 20px 0px rgba(142, 148, 155, 0.10);
         &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
             opacity: 1;
         }
     }
-    &.active {
+    /*&.active {
         border-color: var(--clr-att);
         &:hover {
             &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
                 opacity: 0;
             }
         }
-    }
+    }*/
     &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
         content: "";
         display: block;
