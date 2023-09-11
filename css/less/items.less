@@ -258,16 +258,25 @@
     display: flex;
     min-height: 100%;
     align-items: center;
-    padding: 12px 30px 12px 8px;
+    padding: 11px 29px 11px 8px;
     color: var(--clr-base);
+    border: 1px solid #fff;
     background: #fff;
     position: relative;
     transition: box-shadow ease 0.2s;
-    &:hover, &.active {
+    &:hover {
         color: var(--clr-base);
         box-shadow: 0px 12px 20px 0px rgba(142, 148, 155, 0.10);
         &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
             opacity: 1;
+        }
+    }
+    &.active {
+        border-color: var(--clr-att);
+        &:hover {
+            &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
+                opacity: 0;
+            }
         }
     }
     &:before, &:after, .tile-photo-wrap:before, .tile-photo-wrap:after {
@@ -417,7 +426,7 @@
         position: relative;
         width: 100%;
         flex-shrink: 0;
-        z-index: 3;
+        //z-index: 3;
     }
     .tile-order-wrap {
         position: absolute;
@@ -480,13 +489,29 @@
         top: 216px;
         right: 24px;
     }
+    .slick-list {
+        z-index: 3;
+    }
     .slick-dots {
+        z-index: 7;
         li {
             margin: 0 4px 4px 4px;
             button {
                 width: 30px;
                 height: 1px;
                 background-color: #C5CED9;
+            }
+            button {
+                overflow: visible;
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    bottom: -10px;
+                    left: 0;
+                    right: 0;
+                }
             }
             &.slick-active {
                 button {

@@ -124,7 +124,7 @@ input[type=number]{
         padding: 0 0 0 53px;
         font-size: 16px;
         font-weight: 600;
-        color: #8E949B;
+        color: var(--clr-base);
     }
     [placeholder]::-webkit-input-placeholder {color: #8E949B;}
     [placeholder]:-moz-placeholder {color: #8E949B;}
@@ -348,6 +348,7 @@ input[type=number]{
             &~label {
                 &:after {
                     right: 3px;
+                    background-color: var(--clr-att);
                 }
             }
         }
@@ -372,7 +373,7 @@ input[type=number]{
             height: 18px;
             z-index: 2;
             border-radius: 50%;
-            background-color: var(--clr-att);
+            background-color: #C1C3C7;
             position: absolute;
             top: 12px;
             right: 22px;
