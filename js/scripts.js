@@ -627,7 +627,15 @@ buttonUp.addEventListener('click', function(e) {
 	e.preventDefault()
 	e.stopPropagation()
 })
-
+window.onscroll = function() {scrollFunction()}
+function scrollFunction() {
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		buttonUp.style.display = "block";
+	} else {
+		buttonUp.style.display = "none";
+	}
+}
+scrollFunction()
 
 //js tabs
 const tabsNav = document.querySelectorAll('.js-tabs-nav')
@@ -645,7 +653,8 @@ function tabsActiveStart() {
 			if (tabsNavElements[iElements].classList.contains('active')) {
 				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
 				for (j = 0; j < tabsBlocks.length; j++) {
-					if (tabsBlocks[j].dataset.tab === tabsNavElementActive) {
+					if (tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive) > -1) {
+						console.log(tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive))
 						tabsBlocks[j].classList.add('active')
 					}
 				}
@@ -776,11 +785,13 @@ for (i = 0; i < tglButtons.length; i++) {
 //js tab features activate
 const buttonTabFeaturesActivate = document.querySelector('.js-tab-features-activate')
 const buttonTabFeatureTop = document.querySelector('.tabs-box').offsetTop - 50
-buttonTabFeaturesActivate.addEventListener('click', function(e) {
-	document.querySelector('.btn-tab[data-tab=card-tab02]').click()
-	window.scrollTo({top: buttonTabFeatureTop, behavior: 'smooth'})
-	e.preventDefault()
-	e.stopPropagation()
-	return false
-})
+if (buttonTabFeaturesActivate) {
+	buttonTabFeaturesActivate.addEventListener('click', function(e) {
+		document.querySelector('.btn-tab[data-tab=card-tab02]').click()
+		window.scrollTo({top: buttonTabFeatureTop, behavior: 'smooth'})
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
 
