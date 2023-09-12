@@ -654,7 +654,6 @@ function tabsActiveStart() {
 				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
 				for (j = 0; j < tabsBlocks.length; j++) {
 					if (tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive) > -1) {
-						console.log(tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive))
 						tabsBlocks[j].classList.add('active')
 					}
 				}
@@ -795,3 +794,38 @@ if (buttonTabFeaturesActivate) {
 	})
 }
 
+
+
+//table
+const tableContent = document.querySelector('.table-box table')
+const tableWrap = document.querySelector('.table-box')
+const tableScrollWrap = document.querySelector('.table-box .tbl-inner-wrap')
+const tableContentWidth = document.querySelector('.table-box table').clientWidth
+const tableWrapWidth = document.querySelector('.table-box').clientWidth
+const tableScrollWrapWidth = document.querySelector('.table-box .tbl-inner-wrap').clientWidth
+const tableFixedLeft = document.querySelector('.table-box .td-fixed').previousElementSibling.clientWidth
+
+function tableScrollFix() {
+	if (tableContentWidth > tableWrapWidth) {
+		tableWrap.classList.add('table-scroll')
+	} else {
+		tableWrap.classList.remove('table-scroll')
+	}
+}
+if (tableScrollWrap) {
+	tableScrollWrap.addEventListener('scroll', function() {
+		if ((tableScrollWrapWidth + tableScrollWrap.scrollLeft) === tableContentWidth) {
+			tableWrap.classList.remove('table-scroll')
+		} else {
+			tableWrap.classList.add('table-scroll')
+		}
+		if (tableScrollWrap.scrollLeft  > tableFixedLeft) {
+			tableWrap.classList.add('table-fixed')
+		} else {
+			tableWrap.classList.remove('table-fixed')
+		}
+	})
+}
+if (tableContent) {
+	tableScrollFix()
+}

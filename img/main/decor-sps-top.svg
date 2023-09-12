@@ -1,0 +1,16 @@
+<svg width="320" height="260" viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="23.7041" y1="-35.6483" x2="296.647" y2="237.295" stroke="white" stroke-opacity="0.17" stroke-width="0.5"/>
+<line x1="22.3506" y1="237.295" x2="295.294" y2="-35.6483" stroke="white" stroke-opacity="0.17" stroke-width="0.5"/>
+<circle cx="160" cy="100" r="149.5" stroke="#C2C2C2" stroke-opacity="0.08" stroke-width="21"/>
+<line y1="-0.25" x2="100" y2="-0.25" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 195 136)" stroke="white" stroke-opacity="0.33" stroke-width="0.5"/>
+<line x1="123.823" y1="135.823" x2="194.534" y2="65.1125" stroke="white" stroke-opacity="0.33" stroke-width="0.5"/>
+<circle cx="160" cy="99" r="58" stroke="white" stroke-opacity="0.09" stroke-width="8"/>
+<circle cx="160" cy="100" r="28" fill="white" fill-opacity="0.06"/>
+<circle cx="160" cy="100" r="20" fill="#F91C1C"/>
+<circle cx="160" cy="100" r="13" fill="black"/>
+<circle cx="160" cy="100" r="3" fill="#8E949B"/>
+<mask id="path-11-inside-1_270_14605" fill="white">
+<path d="M227.295 221.624C207.365 232.651 185.03 238.612 162.256 238.982C139.481 239.351 116.965 234.119 96.6874 223.744L97.174 222.793C117.296 233.088 139.639 238.28 162.239 237.914C184.838 237.547 207.001 231.632 226.778 220.689L227.295 221.624Z"/>
+</mask>
+<path d="M227.295 221.624C207.365 232.651 185.03 238.612 162.256 238.982C139.481 239.351 116.965 234.119 96.6874 223.744L97.174 222.793C117.296 233.088 139.639 238.28 162.239 237.914C184.838 237.547 207.001 231.632 226.778 220.689L227.295 221.624Z" stroke="#F91C1C" stroke-width="2" mask="url(#path-11-inside-1_270_14605)"/>
+</svg>
