@@ -110,8 +110,12 @@
         }
     }
     .link-phone {
-        color: var(--clr-att);
         margin-right: 10px;
+    }
+    a {
+        &:not(:hover) {
+            color: inherit;
+        }
     }
 }
 .item-tile-catalog-small {
@@ -1602,7 +1606,6 @@
             font-size: (19/22em);
         }
         .link-phone {
-            color: inherit;
             border-bottom: none;
         }
     }
