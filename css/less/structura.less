@@ -115,6 +115,9 @@ html {
             display: flex;
             flex-direction: column;
         }
+        .footer {
+            color: #8E949B;
+        }
     }
     &.wrap-main {
         padding-top: 0;
@@ -627,6 +630,13 @@ html {
     }
 }
 @media (min-width: 1024px) {
+    .wrap {
+        &.wrap-error {
+            .footer {
+                color: rgba(255, 255, 255, 0.68);
+            }
+        }
+    }
     .wrap-footer-light {
         .footer {
             .inner-wrap {
