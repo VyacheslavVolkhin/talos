@@ -580,7 +580,10 @@ body {
   padding-top: 60px;
 }
 .wrap.wrap-error {
-  background: var(--clr-base);
+  background: #090806;
+}
+.wrap.wrap-error .footer {
+  background-color: #090806;
 }
 .wrap.wrap-error .breadcrumbs-box {
   position: relative;
@@ -3942,6 +3945,9 @@ body {
   position: relative;
   margin: 0 auto;
   width: 18px;
+}
+.table-box .td-action-wrap:hover .popup-content-block {
+  display: block;
 }
 .table-box .td-action-wrap .elm-color.active .elm-tooltip {
   display: none;
