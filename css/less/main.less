@@ -3,10 +3,9 @@
 	--clr-att: #F91C1C;
 	--clr-att-hover: #F84E4E;
 	--clr-light: #f1f1f1;
-	--clr-dark: #191919;
-    --clr-bg-lihgt: #f1f1f1;
-    --clr-bg-dark: #191919;
+    --clr-bg-light: #f1f1f1;
     --clr-bg-att: #F91C1C;
+    --clr-light-second: #F1F2F3;
 
 	--min: 375px;
 	--max: 1500px;
@@ -38,7 +37,7 @@
         &::-webkit-scrollbar {
             height: 1px;
             width: 1px;
-            background-color: #F1F2F3;
+            background-color: var(--clr-light-second);
         }
         &::-webkit-scrollbar-thumb {
             background-color: var(--clr-att);
@@ -70,7 +69,7 @@
     &::-webkit-scrollbar {
         height: 1px;
         width: 1px;
-        background-color: #F1F2F3;
+        background-color: var(--clr-light-second);
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--clr-att);
@@ -322,7 +321,7 @@ h6, .h6-title {
         --paddingContainer: 30px;
     }
     body {
-        background: var(--clr-bg-lihgt);
+        background: var(--clr-bg-light);
     }
     .h1-title, h1 {
         font-size: 5.2rem;

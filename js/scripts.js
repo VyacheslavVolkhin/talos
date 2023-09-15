@@ -783,7 +783,7 @@ for (i = 0; i < tglButtons.length; i++) {
 
 //js tab features activate
 const buttonTabFeaturesActivate = document.querySelector('.js-tab-features-activate')
-const buttonTabFeatureTop = document.querySelector('.tabs-box').offsetTop - 50
+const buttonTabFeatureTop = (innerWidth < 1024) ? document.querySelector('.tabs-box').offsetTop : document.querySelector('.tabs-box').offsetTop + 90
 if (buttonTabFeaturesActivate) {
 	buttonTabFeaturesActivate.addEventListener('click', function(e) {
 		document.querySelector('.btn-tab[data-tab=card-tab02]').click()

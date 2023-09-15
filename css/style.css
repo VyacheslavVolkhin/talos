@@ -4,10 +4,9 @@
   --clr-att: #F91C1C;
   --clr-att-hover: #F84E4E;
   --clr-light: #f1f1f1;
-  --clr-dark: #191919;
-  --clr-bg-lihgt: #f1f1f1;
-  --clr-bg-dark: #191919;
+  --clr-bg-light: #f1f1f1;
   --clr-bg-att: #F91C1C;
+  --clr-light-second: #F1F2F3;
   --min: 375px;
   --max: 1500px;
   --paddingContainer: 12px;
@@ -34,7 +33,7 @@
 .scroll-element-content.scroll-hor::-webkit-scrollbar {
   height: 1px;
   width: 1px;
-  background-color: #F1F2F3;
+  background-color: var(--clr-light-second);
 }
 .scroll-element-content.scroll-hor::-webkit-scrollbar-thumb {
   background-color: var(--clr-att);
@@ -65,7 +64,7 @@
 .scroll-element-content::-webkit-scrollbar {
   height: 1px;
   width: 1px;
-  background-color: #F1F2F3;
+  background-color: var(--clr-light-second);
 }
 .scroll-element-content::-webkit-scrollbar-thumb {
   background-color: var(--clr-att);
@@ -432,7 +431,7 @@ h5 {
     --paddingContainer: 30px;
   }
   body {
-    background: var(--clr-bg-lihgt);
+    background: var(--clr-bg-light);
   }
   .h1-title,
   h1 {
@@ -696,7 +695,7 @@ body {
 }
 .header {
   z-index: 99;
-  background: var(--clr-bg-dark);
+  background: var(--clr-base);
   color: #fff;
   position: fixed;
   top: 0;
@@ -4544,7 +4543,6 @@ body {
 .order-outer-wrap .main-form-box .form-input {
   height: 64px;
   font-size: 16px;
-  background: #242424;
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
 }
@@ -4567,7 +4565,7 @@ body {
   padding: 12px;
   margin: 0;
   border-top: 1px solid #4B4B4B;
-  background: #191919;
+  background: var(--clr-base);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .order-outer-wrap .main-form-box .frm-row-submit .field-button .btn {
@@ -5060,9 +5058,6 @@ body {
 .card-box .info-section-action {
   font-size: 16px;
   font-weight: 600;
-}
-.card-box .info-section-action a {
-  color: var(--clr-att);
 }
 .card-box .info-section-button:before {
   content: attr(data-show);
@@ -6651,7 +6646,8 @@ body {
   bottom: 0;
   left: 50%;
   width: 100vw;
-  margin-left: -50vw;
+  min-width: 375px;
+  transform: translateX(-50%);
 }
 .top-box .photo-inner-wrap:before {
   content: "";
