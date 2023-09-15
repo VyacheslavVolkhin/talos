@@ -582,11 +582,18 @@ body {
   padding-top: 60px;
 }
 .wrap.wrap-error {
-  background: #090806;
+  background: #090806 url(../img/404-bg.jpg) center no-repeat;
+  background-size: cover;
 }
 .wrap.wrap-error .footer {
   background-color: transparent;
   color: var(--clr-light-third);
+}
+.wrap.wrap-error .footer .info-wrap {
+  background: transparent;
+}
+.wrap.wrap-error .footer .inner-wrap:before {
+  display: none;
 }
 .wrap.wrap-error .breadcrumbs-box {
   position: relative;
@@ -1123,9 +1130,6 @@ body {
 @media (min-width: 1024px) {
   .wrap.wrap-error .footer {
     color: rgba(255, 255, 255, 0.68);
-  }
-  .wrap.wrap-error .footer .info-wrap {
-    background-color: #090806;
   }
   .wrap-footer-light .footer .inner-wrap:before {
     background: var(--clr-light-third);
@@ -7570,14 +7574,16 @@ body.popup-open {
   }
 }
 @media (max-width: 767px) {
-  .error-box:before {
-    padding-top: 40%;
-  }
-  .error-box .photo-inner-wrap {
-    left: calc(var(--paddingContainer) * -1);
-    right: calc(var(--paddingContainer) * -1);
-    top: -60px;
-  }
+  /*.error-box {
+        &:before {
+            padding-top: 40%;
+        }
+        .photo-inner-wrap {
+            left: calc(var(--paddingContainer) * -1);
+            right: calc(var(--paddingContainer) * -1);
+            top: -60px;
+        }
+    }*/
   .card-info-box {
     padding-top: 30px;
     padding-bottom: 30px;

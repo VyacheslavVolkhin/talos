@@ -104,10 +104,19 @@ html {
 .wrap {
     padding-top: 60px;
     &.wrap-error {
-        background: #090806;
+        background: #090806 url(../img/404-bg.jpg) center no-repeat;
+        background-size: cover;
         .footer {
             background-color: transparent;
             color: var(--clr-light-third);
+            .info-wrap {
+                background: transparent;
+            }
+            .inner-wrap {
+                &:before {
+                    display: none;
+                }
+            }
         }
         .breadcrumbs-box {
             position: relative;
@@ -636,7 +645,6 @@ html {
             .footer {
                 color: rgba(255, 255, 255, 0.68);
                 .info-wrap {
-                    background-color: #090806;
                 }
             }
         }
