@@ -901,6 +901,10 @@
         display: none;
     }
     .main-form-box {
+        
+        .inner-wrap {
+            z-index: 11;
+        }
         .form-title-wrap {
             .h2-title {
                 font-size: 24px;
@@ -1170,7 +1174,6 @@
         margin-left: calc(50vw - 80px);
         bottom: 0;
         z-index: 10;
-        background: #f00;
         overflow: hidden;
         display: none;
         .btn {
@@ -1365,6 +1368,9 @@
     .info-section-action {
         font-size: 16px;
         font-weight: 600;
+        a {
+            color: var(--clr-att);
+        }
     }
     .info-section-button {
         &:before {
@@ -2221,11 +2227,16 @@
             left: 0;
             right: 0;
             transition: all ease 0.2s;
+            .t-rotate(45deg);
             opacity: 0;
         }
         &.active {
+            color: var(--clr-att);
+        }
+        &:hover {
             &:before {
                 opacity: 1;
+                .t-rotate(0deg);
             }
         }
     }
@@ -3445,6 +3456,27 @@ body.popup-open {
     }
 }
 @media (max-width: 1023px) {
+    .main-form-box {
+        .inner-wrap {
+            z-index: 5;
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            opacity: 1;
+            transform: scaleX(-1);
+            margin: 0;
+            background-position: center;
+            background-image: url(../img/main/decor-main.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
     @supports (display: contents) {
         .about-box {
             display: flex;
@@ -3524,7 +3556,9 @@ body.popup-open {
         flex-direction: column;
         width: 100%;
         flex: 1;
-
+        .main-form-box {
+            position: relative;
+        }
         .title-box {
             margin-bottom: 24px;
             padding-top: 10px;
@@ -3858,6 +3892,18 @@ body.popup-open {
     }
 }
 @media (max-width: 639px) {
+    .main-form-box {
+        &:before {
+            left: auto;
+            right: 50%;
+            margin-right: -400px;
+            width: 1000px;
+            bottom: auto;
+            height: 100%;
+            max-height: 700px;
+            background-position: right center;
+        }
+    }
     .card-box {
         .photos-inner-wrap {
             width: 100%;
