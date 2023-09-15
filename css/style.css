@@ -7661,6 +7661,13 @@ body.popup-open {
   }
 }
 @media (max-width: 639px) {
+  .order-outer-wrap .main-form-box:before {
+    right: auto;
+    left: 50%;
+    margin-right: 0;
+    margin-left: -100px;
+    transform: scaleX(-1);
+  }
   .main-form-box:before {
     left: auto;
     right: 50%;
