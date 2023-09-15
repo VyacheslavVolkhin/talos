@@ -10819,6 +10819,12 @@ input[type=number] {
   padding: 0 0 0 53px;
   font-size: 16px;
   font-weight: 600;
+  color: #8E949B;
+}
+.frm-field-range .form-input:focus {
+  color: var(--clr-base);
+}
+.frm-field-range .form-input.active {
   color: var(--clr-base);
 }
 .frm-field-range [placeholder]::-webkit-input-placeholder {

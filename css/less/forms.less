@@ -124,7 +124,13 @@ input[type=number]{
         padding: 0 0 0 53px;
         font-size: 16px;
         font-weight: 600;
-        color: var(--clr-base);
+        color: #8E949B;
+        &:focus {
+            color: var(--clr-base);
+        }
+        &.active {
+            color: var(--clr-base);
+        }
     }
     [placeholder]::-webkit-input-placeholder {color: #8E949B;}
     [placeholder]:-moz-placeholder {color: #8E949B;}
