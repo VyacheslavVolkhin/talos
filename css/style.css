@@ -4036,6 +4036,10 @@ body {
   right: 0;
   width: 100%;
 }
+.error-box .photo-inner-wrap .error-image img {
+  display: block;
+  width: 100%;
+}
 .error-box .action-wrap {
   text-align: center;
   margin-top: 32px;
@@ -7566,6 +7570,14 @@ body.popup-open {
   }
 }
 @media (max-width: 767px) {
+  .error-box:before {
+    padding-top: 40%;
+  }
+  .error-box .photo-inner-wrap {
+    left: calc(var(--paddingContainer) * -1);
+    right: calc(var(--paddingContainer) * -1);
+    top: -60px;
+  }
   .card-info-box {
     padding-top: 30px;
     padding-bottom: 30px;

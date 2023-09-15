@@ -412,6 +412,10 @@
             left: 0;
             right: 0;
             width: 100%;
+            img {
+                display: block;
+                width: 100%;
+            }
         }
     }
     .action-wrap {
@@ -3460,6 +3464,7 @@ body.popup-open {
     }
 }
 @media (max-width: 1023px) {
+    
     .main-form-box {
         .inner-wrap {
             z-index: 5;
@@ -3811,7 +3816,16 @@ body.popup-open {
     }
 }
 @media (max-width: 767px) {
-    
+    .error-box {
+        &:before {
+            padding-top: 40%;
+        }
+        .photo-inner-wrap {
+            left: calc(var(--paddingContainer) * -1);
+            right: calc(var(--paddingContainer) * -1);
+            top: -60px;
+        }
+    }
     .card-info-box {
         padding-top: 30px;
         padding-bottom: 30px;
