@@ -999,8 +999,8 @@
     background: rgba(142, 148, 155, 0.06);
     position: relative;
     padding: 5rem 0 5rem 0;
-    font-size: 2rem;
-    line-height: (28/20);
+    font-size: 1.8rem;
+    line-height: (28/18);
     font-weight: 600;
     .items-wrap {
         font-size: 18px;
@@ -1026,7 +1026,7 @@
         margin-bottom: 3rem;
     }
     ul, ol {
-        font-size: 18px;
+        //font-size: 18px;
         li {
             margin-bottom: 15px;
             &:last-child {
@@ -1038,6 +1038,9 @@
         margin: 0 0 2rem 0;
         font-weight: bold;
         line-height: (28/24);
+    }
+    .text-main {
+        
     }
 }
 .card-info-box {
@@ -3208,6 +3211,7 @@ body.popup-open {
             right: 0;
             width: 50px;
             height: 50px;
+            z-index: 10;
             &:before {
                 background-size: 40px auto;
                 filter: brightness(0) invert(1);
@@ -3597,6 +3601,9 @@ body.popup-open {
             margin-bottom: 15px;
         }
         .text-main {
+            
+        }
+        .text-att {
             font-size: 20px;
             line-height: 1.4;
         }
@@ -4073,6 +4080,12 @@ body.popup-open {
     }
 }
 @media (min-width: 1024px) {
+    .card-text-box {
+        .text-main {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+    }
     .sps-info-box {
         .sps-rows-wrap {
             display: flex;
